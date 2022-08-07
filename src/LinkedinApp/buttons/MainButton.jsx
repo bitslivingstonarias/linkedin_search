@@ -7,11 +7,12 @@ import { ColorButton } from "../ui";
 
 export const CustomizedButtons = ({message = ''}) => {
 
-  const { setVals } = useContext( UserContext );
+  const { Vals, setVals } = useContext( UserContext );
   const navigate = useNavigate();
 
   const ChangePage = () => {
     setVals({
+      ...Vals,
       maxWidth: 500,
       title: 'Formulario de Registro',
       content: '',

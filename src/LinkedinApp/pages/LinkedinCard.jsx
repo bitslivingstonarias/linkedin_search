@@ -1,8 +1,11 @@
+import { MultiCard } from "../components"
+import { InfoCard } from "../components/InfoCard"
+import { StyleHook } from "../hooks/StyleHook"
 
 export const LinkedinCard = () => {
   return (
-    <div>
-      <h1>Linkedin Card</h1>
-    </div>
+    <StyleHook>
+      <InfoCard />
+    </StyleHook>
   )
 }

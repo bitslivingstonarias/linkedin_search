@@ -8,8 +8,6 @@ export const SendButton = ({message = ''}) => {
 
   const { Vals = '' } = useContext( UserContext );
 
-  console.log(Vals.isFormValid)
-
   const SendData = () => {}
 
     return (

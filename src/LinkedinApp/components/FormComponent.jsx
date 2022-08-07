@@ -13,11 +13,12 @@ export const FormComponent = () => {
     isFormValid, URLValid, FullNameValid, DescriptionValid, 
   } = useForm( formData, formValidations );
 
-  const { setVals } = useContext( UserContext );
+  const { Vals, setVals } = useContext( UserContext );
 
   useEffect(() => {
     setVals({
-      isFormValid: isFormValid
+      ...Vals,
+      isFormValid
     })
   }, [isFormValid]);
 

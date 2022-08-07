@@ -12,7 +12,7 @@ export const FormButton = ({message = ''}) => {
 
   const ChangePage = () => {
     setVals({
-      maxWidth: 345,
+      maxWidth: 366,
       title: '',
       content: '',
       isForm: false,

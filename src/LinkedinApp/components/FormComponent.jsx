@@ -1,6 +1,6 @@
 
 import { FilledInput, FormControl, InputLabel, TextField } from '@mui/material';
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../hooks";
 import { vals, formData, formValidations } from "../data/Fieldsdata";
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../context/ContextPage';
@@ -13,11 +13,15 @@ export const FormComponent = () => {
     isFormValid, URLValid, FullNameValid, DescriptionValid, 
   } = useForm( formData, formValidations );
 
-  const { setVals } = useContext( UserContext );
+  const { Vals, setVals } = useContext( UserContext );
 
   useEffect(() => {
     setVals({
-      isFormValid: isFormValid
+      ...Vals,
+      isFormValid,
+      FullName,
+      Description,
+      URL
     })
   }, [isFormValid]);
 

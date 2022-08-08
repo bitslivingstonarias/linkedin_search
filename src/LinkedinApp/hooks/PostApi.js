@@ -6,7 +6,8 @@ const SendUser = async({fullname, description, url}) => {
 
     try {
         const { data } = await postuserApi.post('/auth/new',{fullname, description, url});
-        console.log(data) 
+        console.log(data)
+        Swal.fire('Usuario Registrado', 'sucess'); 
     } catch (error) {
         setTimeout(() => {
             console.log(error);
